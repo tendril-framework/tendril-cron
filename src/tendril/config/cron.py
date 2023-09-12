@@ -28,6 +28,16 @@ depends = ['tendril.config.core']
 
 config_elements_cron = [
     ConfigOption(
+        'CRON_ENABLED',
+        "False",
+        "Whether to enable Cron. This only controls whether "
+        "tendril will attempt to locate and install cron jobs. "
+        "Note that if a file containing a cron job is imported "
+        "by other code, and if the asyncio reactor is running, "
+        "then that cron job will probably run irrespective of "
+        "this setting."
+    ),
+    ConfigOption(
         'CRON_PREFIXES',
         "[]",
         "List of package namespaces other than "
