@@ -26,6 +26,7 @@ def install_jobs(prefixes=CRON_PREFIXES):
 
 def run():
     install_jobs()
+    asyncio.get_event_loop().run_forever()
 
 
 if __name__ == '__main__':
